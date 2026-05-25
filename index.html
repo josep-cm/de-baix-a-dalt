@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>De baix a dalt — Construcció eficient i sostenible</title>
+  <meta name="description" content="Construïm i instal·lem habitatges i edificis amb eficiència energètica, tecnologia i precisió tècnica. Demana pressupost a Catalunya." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;450;500;600&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo-chevron.png" />
+
+  <style>
+    /* ── Gate screen ── */
+    #gate {
+      position: fixed; inset: 0;
+      z-index: 9999;
+      background: #0a0a0a;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity .6s cubic-bezier(0.22,1,0.36,1), visibility .6s;
+    }
+    #gate.gate--out {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .gate__box {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 40px; width: 100%; max-width: 380px; padding: 0 24px;
+    }
+    .gate__logo {
+      width: 90px; height: 80px;
+      background: url('assets/logo-mark-white.png') no-repeat center/contain;
+      opacity: 0;
+      transform: translateY(-16px);
+      transition: opacity .7s ease, transform .7s cubic-bezier(0.22,1,0.36,1);
+    }
+    .gate__logo.is-in { opacity: 1; transform: translateY(0); }
+    .gate__label {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: -28px;
+    }
+    .gate__field {
+      width: 100%; position: relative;
+    }
+    .gate__input {
+      width: 100%; height: 56px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 8px;
+      color: #fff; font-family: inherit; font-size: 16px;
+      padding: 0 52px 0 20px;
+      outline: none;
+      transition: border-color .25s, background .25s;
+      letter-spacing: 0.06em;
+    }
+    .gate__input::placeholder { color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
+    .gate__input:focus {
+      border-color: rgba(255,255,255,0.38);
+      background: rgba(255,255,255,0.1);
+    }
+    .gate__input.gate__input--err {
+      border-color: #e05252;
+      animation: gateShake .35s ease;
+    }
+    .gate__btn {
+      position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+      width: 40px; height: 40px; border-radius: 6px;
+      background: rgba(255,255,255,0.12);
+      border: none; cursor: pointer; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s;
+    }
+    .gate__btn:hover { background: rgba(255,255,255,0.22); }
+    .gate__err {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #e05252; text-align: center;
+      height: 16px;
+      transition: opacity .2s;
+    }
+    @keyframes gateShake {
+      0%,100% { transform: translateX(0); }
+      20% { transform: translateX(-8px); }
+      60% { transform: translateX(8px); }
+      80% { transform: translateX(-4px); }
+    }
+  </style>
+
+  <template id="__bundler_thumbnail">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+      <rect width="600" height="600" fill="#f6f6f4"/>
+      <g transform="translate(180, 140)" fill="#0a0a0a">
+        <path d="M120 0 L240 130 L210 130 L210 220 L30 220 L30 130 L0 130 Z"/>
+      </g>
+      <text x="50%" y="450" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="36" fill="#0a0a0a" letter-spacing="-1">de baix a dalt</text>
+    </svg>
+  </template>
+</head>
+<body>
+  <!-- ── Gate / password screen ── -->
+  <div id="gate">
+    <div class="gate__box">
+      <div class="gate__logo" id="gateLogo"></div>
+      <span class="gate__label">Accés restringit</span>
+      <div class="gate__field">
+        <input
+          id="gateInput"
+          class="gate__input"
+          type="password"
+          placeholder="Contrasenya"
+          autocomplete="current-password"
+          autofocus
+        />
+        <button class="gate__btn" id="gateBtn" aria-label="Entrar">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+          </svg>
+        </button>
+      </div>
+      <div class="gate__err" id="gateErr"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var PASSWORD = "debaix2025";
+      var SESSION_KEY = "dbd-auth";
+      var gate = document.getElementById("gate");
+      var input = document.getElementById("gateInput");
+      var btn = document.getElementById("gateBtn");
+      var err = document.getElementById("gateErr");
+      var logo = document.getElementById("gateLogo");
+
+      // Logo entrance animation
+      requestAnimationFrame(function () {
+        setTimeout(function () { logo.classList.add("is-in"); }, 80);
+      });
+
+      // Already authenticated this session?
+      if (sessionStorage.getItem(SESSION_KEY) === "1") {
+        gate.classList.add("gate--out");
+        return;
+      }
+
+      function attempt() {
+        if (input.value === PASSWORD) {
+          sessionStorage.setItem(SESSION_KEY, "1");
+          err.textContent = "";
+          gate.classList.add("gate--out");
+        } else {
+          err.textContent = "Contrasenya incorrecta";
+          input.classList.add("gate__input--err");
+          input.value = "";
+          setTimeout(function () { input.classList.remove("gate__input--err"); }, 400);
+        }
+      }
+
+      btn.addEventListener("click", attempt);
+      input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") attempt();
+        if (err.textContent) err.textContent = "";
+      });
+    })();
+  </script>
+
+  <div id="root"></div>
+
+  <!-- Image-slot component (registers <image-slot>) -->
+  <script src="image-slot.js"></script>
+
+  <!-- Traduccions CA / ES / EN -->
+  <script src="i18n.js"></script>
+
+  <!-- React + Babel -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <!-- Tweaks panel (exposes window.TweaksPanel, useTweaks, TweakSection, etc.) -->
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+
+  <!-- App modules -->
+  <script type="text/babel" src="ui.jsx"></script>
+  <script type="text/babel" src="sections.jsx"></script>
+  <script type="text/babel" src="app.jsx"></script>
+</body>
+</html>
