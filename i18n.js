@@ -158,13 +158,15 @@ const TRANSLATIONS = {
       links: {
         sobreNosaltres: "Sobre nosaltres",
         projectes: "Projectes",
+        blog: "Blog tècnic",
         proces: "Procés tècnic",
-        acreditacions: "Acreditacions",
         pressupost: "Demana pressupost",
         treball: "Treballa amb nosaltres",
       },
       legal: "Tots els drets reservats.",
       legalLinks: "Avís legal · Privacitat · Cookies",
+      zonesLabel: "Zones d'actuació",
+      zonesList: "Vallès Occidental · Vallès Oriental · Baix Llobregat · Barcelonès · Maresme · Girona · Tarragona · Lleida — Sabadell · Terrassa · Sant Cugat del Vallès · Rubí · Cerdanyola · Granollers · Mollet del Vallès · Barcelona · L'Hospitalet · Badalona · Santa Coloma · Cornellà · Esplugues · Sant Joan Despí · Sant Feliu de Llobregat · Gavà · Viladecans · Castelldefels · Sant Boi · El Prat · Mataró · Reus",
     },
     /* Modal */
     modal: {
@@ -352,13 +354,15 @@ const TRANSLATIONS = {
       links: {
         sobreNosaltres: "Sobre nosotros",
         projectes: "Proyectos",
+        blog: "Blog técnico",
         proces: "Proceso técnico",
-        acreditacions: "Acreditaciones",
         pressupost: "Pide presupuesto",
         treball: "Trabaja con nosotros",
       },
       legal: "Todos los derechos reservados.",
       legalLinks: "Aviso legal · Privacidad · Cookies",
+      zonesLabel: "Zonas de actuación",
+      zonesList: "Vallès Occidental · Vallès Oriental · Baix Llobregat · Barcelonès · Maresme · Girona · Tarragona · Lleida — Sabadell · Terrassa · Sant Cugat del Vallès · Rubí · Cerdanyola · Granollers · Mollet del Vallès · Barcelona · L'Hospitalet · Badalona · Santa Coloma · Cornellà · Esplugues · Sant Joan Despí · Sant Feliu de Llobregat · Gavà · Viladecans · Castelldefels · Sant Boi · El Prat · Mataró · Reus",
     },
     modal: {
       eyebrow: "Contacto directo",
@@ -544,13 +548,15 @@ const TRANSLATIONS = {
       links: {
         sobreNosaltres: "About us",
         projectes: "Projects",
+        blog: "Technical blog",
         proces: "Technical process",
-        acreditacions: "Certifications",
         pressupost: "Get a quote",
         treball: "Work with us",
       },
       legal: "All rights reserved.",
       legalLinks: "Legal notice · Privacy · Cookies",
+      zonesLabel: "Service areas",
+      zonesList: "Vallès Occidental · Vallès Oriental · Baix Llobregat · Barcelonès · Maresme · Girona · Tarragona · Lleida — Sabadell · Terrassa · Sant Cugat del Vallès · Rubí · Cerdanyola · Granollers · Mollet del Vallès · Barcelona · L'Hospitalet · Badalona · Santa Coloma · Cornellà · Esplugues · Sant Joan Despí · Sant Feliu de Llobregat · Gavà · Viladecans · Castelldefels · Sant Boi · El Prat · Mataró · Reus",
     },
     modal: {
       eyebrow: "Direct contact",

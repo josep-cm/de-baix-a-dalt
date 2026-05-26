@@ -1,0 +1,134 @@
+# De baix a dalt
+
+> Empresa de construcció eficient i sostenible a Catalunya. Especialitzats en obra nova, reforma integral, instal·lacions tèrmiques (aerotèrmia, geotèrmia), domòtica i energia solar fotovoltaica. Servei a totes les comarques catalanes.
+
+## Qui som
+
+De baix a dalt SLU és una empresa constructora amb més de 20 anys d'experiència i +180 projectes lliurats arreu de Catalunya. Treballem amb propietaris particulars, promotors i empreses, coordinant l'obra i les instal·lacions tècniques des del principi fins al final — de baix a dalt.
+
+Aconseguim una reducció energètica mitjana del 42% respecte a l'obra convencional gràcies a la integració del disseny passiu, l'envolupant tèrmic i les instal·lacions eficients. Acreditats RITE, REBT i CTE.
+
+## Serveis
+
+### Construcció — obra nova i reforma
+- Obra nova claus en mà (cases unifamiliars, edificis plurifamiliars)
+- Reforma integral d'habitatges i locals
+- Naus industrials i espais comercials
+- Assessorament energètic i auditoria constructiva
+
+### Construcció eficient
+Dissenyem l'edifici per minimitzar la demanda energètica: aïllament tèrmic de l'envolupant, ventilació amb recuperador de calor, orientació i llum natural optimitzada. L'energia més barata és la que no necessites consumir.
+
+### Construcció sostenible
+Materials amb declaració ambiental de producte (DAP), gestió selectiva de residus d'obra i avaluació de cicle de vida des del disseny. Un projecte sostenible no costa més: estalvia durant els 50 anys següents.
+
+### Instal·lacions tèrmiques
+- Aerotèrmia (COP > 4): calefacció, refrigeració i ACS
+- Geotèrmia: aprofitament de l'energia del subsòl
+- ACS amb bomba de calor
+- Terra radiant i terra refrescant
+- Climatització per conductes i unitats interiors
+
+Calculem la càrrega tèrmica real de cada edifici i dimensionem exactament el que necessita, sense sobredimensionats.
+
+### Domòtica i instal·lacions elèctriques
+- Quadres elèctrics dimensionats correctament
+- Sistemes domòtics oberts: KNX, Loxone, Home Assistant
+- Control centralitzat des d'una app: llums, persianes, climatització i escenes
+- Automatitzacions per horari, presència i consum
+
+### Energia solar fotovoltaica
+- Plaques fotovoltaiques dimensionades al consum real
+- Bateries per cobrir vespres i pics nocturns
+- Inversors híbrids amb monitoratge remot
+- Optimització automàtica del consum i l'autoconsum
+
+Oferim un estudi d'autoconsum gratuït a partir de la factura elèctrica del client.
+
+## Zones d'actuació
+
+Treballem a totes les comarques de Catalunya. Les nostres principals zones d'actuació:
+
+### Vallès Occidental
+Sabadell, Terrassa, Sant Cugat del Vallès, Rubí, Cerdanyola del Vallès, Barberà del Vallès, Castellar del Vallès, Matadepera, Montcada i Reixac, Ripollet, Badia del Vallès.
+
+### Vallès Oriental
+Granollers, Mollet del Vallès, La Llagosta, Parets del Vallès, Montmeló, Les Franqueses del Vallès, La Garriga, Cardedeu.
+
+### Baix Llobregat
+Cornellà de Llobregat, Sant Joan Despí, Sant Feliu de Llobregat, Esplugues de Llobregat, Gavà, Viladecans, Castelldefels, Sant Boi de Llobregat, El Prat de Llobregat, Molins de Rei, Martorell, Abrera, Olesa de Montserrat, Pallejà.
+
+### Barcelonès
+Barcelona, L'Hospitalet de Llobregat, Badalona, Santa Coloma de Gramenet.
+
+### Maresme
+Mataró, Premià de Mar, El Masnou, Vilassar de Mar, Calella, Pineda de Mar, Arenys de Mar.
+
+### Garraf i Alt Penedès
+Vilanova i la Geltrú, Sitges, Sant Pere de Ribes, Vilafranca del Penedès.
+
+### Comarques Gironines
+Girona, Salt, Lloret de Mar, Blanes, Olot, Figueres, Ripoll.
+
+### Camp de Tarragona i Terra Alta
+Tarragona, Reus, Salou, Cambrils, El Vendrell, Torredembarra.
+
+### Lleida i Pirineu
+Lleida, Mollerussa, Tàrrega, la Seu d'Urgell, Sort, Tremp.
+
+## Preguntes freqüents
+
+**Quins tipus de projectes construïu?**
+Obra nova i reforma: cases unifamiliars, edificis plurifamiliars, locals comercials i naus industrials. Treballem tant per a particulars com per a promotors i empreses.
+
+**Treballeu a Sabadell?**
+Sí. El Vallès Occidental és una de les nostres zones principals. Treballem a Sabadell, Terrassa, Sant Cugat del Vallès, Rubí, Cerdanyola i tota la comarca.
+
+**Treballeu a Sant Cugat del Vallès?**
+Sí. Sant Cugat és una de les zones de major demanda de construcció eficient i instal·lació d'aerotèrmia i solar a Catalunya.
+
+**Instal·leu plaques solars a Barcelona i rodalies?**
+Sí. Instal·lem sistemes fotovoltaics a Barcelona, L'Hospitalet, Badalona, i tota l'àrea metropolitana, incloent Baix Llobregat i Maresme.
+
+**Quant triga un pressupost?**
+Retornem una proposta tècnica i econòmica en menys d'una setmana.
+
+**L'aerotèrmia és adequada per a qualsevol habitatge?**
+Sí, especialment en obres noves o reformes amb bon aïllament. Amb un COP superior a 4, és el sistema més eficient per a calefacció, refrigeració i ACS.
+
+**Feu estudi solar gratuït?**
+Sí. A partir de la factura elèctrica calculem el sistema fotovoltaic òptim sense cost.
+
+**Quin estalvi energètic obtinc?**
+De mitjana un 42% respecte a una construcció convencional, gràcies a la combinació de disseny passiu, aïllament i instal·lacions eficients.
+
+**Quina és la diferència entre aerotèrmia i geotèrmia?**
+L'aerotèrmia extreu energia de l'aire exterior (més econòmica d'instal·lar, COP > 4). La geotèrmia extreu energia del subsòl (rendiment més estable tot l'any, inversió inicial més alta). Les dues eliminen el gas i redueixen la factura energètica entre un 60 i un 75%.
+
+## Pàgines del lloc web
+
+- Pàgina principal: https://debaixadalt.cat/
+- Projectes i casos reals: https://debaixadalt.cat/projectes/
+- Blog tècnic: https://debaixadalt.cat/blog/
+
+## Articles destacats del blog
+
+### Aerotèrmia vs gas a Catalunya el 2025: quin surt a compte?
+Comparació de costos d'instal·lació, factura anual i retorn de la inversió entre bomba de calor aerotèrmica i caldera de gas. Amb subvencions del IDAE i ICAEN, el ROI de l'aerotèrmia és de 7–9 anys. Estalvi anual estimat: ~630 € per a habitatge de 150 m².
+URL: https://debaixadalt.cat/blog/#aerotermia-vs-gas-catalunya-2025
+
+### Quant costa instal·lar plaques solars a Sabadell el 2025?
+Preus reals (4.500–15.000 € segons potència), subvencions vigents (IDAE + bonificació ICIO del 95% a Sabadell) i retorn d'inversió de 8–13 anys per a habitatges al Vallès Occidental.
+URL: https://debaixadalt.cat/blog/#cost-plaques-solars-sabadell-2025
+
+### Casa passiva a Catalunya: guia per a propietaris
+Explicació dels 5 principis del disseny passiu, costos reals (sobrecost del 8–15% respecte a construcció convencional) i estalvi energètic de fins al 90%. Ideal per a qui construeix habitatge habitual a Catalunya.
+URL: https://debaixadalt.cat/blog/#casa-passiva-guia-propietaris-catalunya
+
+## Contacte
+
+- Web: https://debaixadalt.cat/
+- Email: hola@debaixadalt.cat
+- Telèfon: +34 000 000 000
+- Resposta en menys de 24 hores laborables
+- Visita tècnica sense cost

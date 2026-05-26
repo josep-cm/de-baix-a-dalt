@@ -502,10 +502,10 @@ function Footer() {
           </div>
           <div>
             <p className="footer__heading">{f.colEstudi || "Estudi"}</p>
-            <a className="footer__link" href="#">{links.sobreNosaltres || "Sobre nosaltres"}</a>
-            <a className="footer__link" href="#">{links.projectes || "Projectes"}</a>
-            <a className="footer__link" href="#">{links.proces || "Procés tècnic"}</a>
-            <a className="footer__link" href="#">{links.acreditacions || "Acreditacions"}</a>
+            <a className="footer__link" href="#top">{links.sobreNosaltres || "Sobre nosaltres"}</a>
+            <a className="footer__link" href="projectes.html">{links.projectes || "Projectes"}</a>
+            <a className="footer__link" href="blog.html">{links.blog || "Blog tècnic"}</a>
+            <a className="footer__link" href="#construccio">{links.proces || "Procés tècnic"}</a>
           </div>
           <div>
             <p className="footer__heading">{f.colContacte || "Contacte"}</p>
@@ -514,6 +514,12 @@ function Footer() {
             <button className="footer__link footer__link--btn" onClick={() => open(links.pressupost || "Demana pressupost")}>{links.pressupost || "Demana pressupost"}</button>
             <a className="footer__link" href="#">{links.treball || "Treballa amb nosaltres"}</a>
           </div>
+        </div>
+        <div className="footer__zones">
+          <p className="footer__zones-label">{f.zonesLabel || "Zones d'actuació"}</p>
+          <p className="footer__zones-list">
+            {f.zonesList || "Vallès Occidental · Vallès Oriental · Baix Llobregat · Barcelonès · Maresme · Girona · Tarragona · Lleida — Sabadell · Terrassa · Sant Cugat del Vallès · Rubí · Cerdanyola · Granollers · Mollet del Vallès · Barcelona · L'Hospitalet · Badalona · Santa Coloma · Cornellà · Esplugues · Sant Joan Despí · Sant Feliu de Llobregat · Gavà · Viladecans · Castelldefels · Sant Boi · El Prat · Mataró · Reus"}
+          </p>
         </div>
         <div className="footer__bottom">
           <span>© {new Date().getFullYear()} De baix a dalt SLU. {f.legal || "Tots els drets reservats."}</span>

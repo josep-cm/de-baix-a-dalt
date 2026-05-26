@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — De baix a dalt</title>
+  <meta name="description" content="Articles tècnics sobre construcció eficient, aerotèrmia, energia solar i domòtica a Catalunya. Guies per a propietaris i promotors." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://debaixadalt.cat/blog/" />
+  <link rel="alternate" hreflang="ca" href="https://debaixadalt.cat/blog/" />
+  <link rel="alternate" hreflang="es" href="https://debaixadalt.cat/es/blog/" />
+  <link rel="alternate" hreflang="x-default" href="https://debaixadalt.cat/blog/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://debaixadalt.cat/blog/" />
+  <meta property="og:title" content="Blog tècnic — De baix a dalt" />
+  <meta property="og:description" content="Articles sobre construcció eficient, aerotèrmia, solar i domòtica a Catalunya." />
+  <meta property="og:image" content="https://debaixadalt.cat/assets/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": "https://debaixadalt.cat/blog/",
+    "name": "Blog tècnic — De baix a dalt",
+    "description": "Articles tècnics sobre construcció eficient, aerotèrmia, energia solar i domòtica a Catalunya.",
+    "url": "https://debaixadalt.cat/blog/",
+    "inLanguage": ["ca", "es"],
+    "publisher": { "@id": "https://debaixadalt.cat/#business" }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;450;500;600&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo-chevron.png" />
+
+  <style>
+    .page-hero {
+      padding: 120px 0 80px;
+      background: var(--ink);
+      color: var(--white);
+    }
+    .page-hero__title { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 500; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 24px; margin-top: 16px; }
+    .page-hero__sub { font-size: 1.1rem; color: rgba(255,255,255,0.6); max-width: 52ch; }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 32px;
+      padding: 64px 0;
+    }
+    .blog-card {
+      display: flex; flex-direction: column;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow .25s, transform .25s;
+      background: var(--white);
+    }
+    .blog-card:hover {
+      box-shadow: 0 8px 32px rgba(10,10,10,0.1);
+      transform: translateY(-2px);
+    }
+    .blog-card--featured {
+      grid-column: span 2;
+      flex-direction: row;
+    }
+    @media (max-width: 720px) {
+      .blog-card--featured { grid-column: span 1; flex-direction: column; }
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+    .blog-card__img-wrap {
+      overflow: hidden; flex-shrink: 0;
+    }
+    .blog-card__img {
+      width: 100%; aspect-ratio: 16/9; object-fit: cover;
+      transition: transform .5s cubic-bezier(0.22,1,0.36,1);
+    }
+    .blog-card--featured .blog-card__img-wrap { width: 48%; }
+    .blog-card--featured .blog-card__img { height: 100%; aspect-ratio: unset; }
+    .blog-card:hover .blog-card__img { transform: scale(1.03); }
+    .blog-card__body { padding: 28px; display: flex; flex-direction: column; flex: 1; }
+    .blog-card__tag {
+      font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .blog-card__title {
+      font-size: 1.15rem; font-weight: 500; letter-spacing: -0.02em;
+      color: var(--ink); line-height: 1.3; margin-bottom: 12px;
+    }
+    .blog-card--featured .blog-card__title { font-size: 1.5rem; }
+    .blog-card__excerpt { font-size: 14.5px; color: var(--ink-muted); line-height: 1.6; flex: 1; }
+    .blog-card__footer {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 24px; padding-top: 16px;
+      border-top: 1px solid var(--line);
+      font-size: 12.5px; color: var(--ink-muted);
+    }
+    .blog-card__read {
+      color: var(--ink); font-weight: 500; display: flex; align-items: center; gap: 6px;
+    }
+
+    /* Article page */
+    .article-header {
+      padding: 120px 0 64px;
+      background: var(--ink);
+      color: var(--white);
+    }
+    .article-header__tag {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 20px;
+    }
+    .article-header__title {
+      font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 500;
+      letter-spacing: -0.03em; line-height: 1.08; max-width: 18ch;
+      margin-bottom: 24px;
+    }
+    .article-header__meta { color: rgba(255,255,255,0.45); font-size: 13.5px; }
+    .article-body {
+      max-width: 720px; margin: 64px auto; padding: 0 24px;
+      font-size: 17px; line-height: 1.75; color: var(--ink);
+    }
+    .article-body h2 { font-size: 1.55rem; font-weight: 500; letter-spacing: -0.025em; margin: 48px 0 16px; }
+    .article-body h3 { font-size: 1.15rem; font-weight: 500; margin: 32px 0 12px; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong { font-weight: 600; color: var(--ink); }
+    .article-body .highlight {
+      background: var(--paper); border-left: 3px solid var(--accent);
+      padding: 20px 24px; margin: 32px 0; border-radius: 0 4px 4px 0;
+      font-size: 1.05rem; font-style: italic; color: var(--ink);
+    }
+    .article-cta {
+      background: var(--ink); color: var(--white);
+      border-radius: 8px; padding: 40px; margin: 48px 0; text-align: center;
+    }
+    .article-cta h3 { font-size: 1.4rem; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .article-cta p { color: rgba(255,255,255,0.6); margin-bottom: 24px; font-size: 15px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="image-slot.js"></script>
+  <script src="i18n.js"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="ui.jsx"></script>
+
+  <script type="text/babel">
+    const ARTICLES = [
+      {
+        id: "aerotermia-vs-gas-catalunya-2025",
+        tag: "Instal·lacions tèrmiques",
+        title: "Aerotèrmia vs gas a Catalunya el 2025: quin surt a compte?",
+        excerpt: "Comparem costos d'instal·lació, factura anual i retorn de la inversió entre bomba de calor aerotèrmica i caldera de gas en habitatges catalans.",
+        date: "Maig 2025",
+        readTime: "7 min",
+        img: "assets/bomba.jpg",
+        featured: true,
+        content: `
+## El context energètic actual a Catalunya
+
+El preu del gas natural a Catalunya ha augmentat un 34% en els darrers tres anys. Mentrestant, les bombes de calor aerotèrmiques han millorat el seu rendiment: els models actuals treballen amb COP superiors a 4, és a dir, per cada kWh elèctric consumit produeixen més de 4 kWh de calor.
+
+Això canvia radicalment el càlcul econòmic per a qualsevol propietari que estigui valorant reformar la seva calefacció.
+
+## Costos d'instal·lació comparats
+
+Per a un habitatge unifamiliar de 150 m² ben aïllat a Catalunya:
+
+- **Caldera de gas de condensació**: 3.500–5.500 €
+- **Aerotèrmia (unitat exterior + fan-coils o terra radiant)**: 8.000–14.000 €
+
+La diferència inicial és real. Però és el punt de partida del càlcul, no la conclusió.
+
+## Factura anual: on canvia tot
+
+Amb preus actuals d'energia a Catalunya (gas: 0,082 €/kWh; electricitat amb tarifa nocturna: 0,11 €/kWh):
+
+| Sistema | Consum anual estimat | Cost anual |
+|---|---|---|
+| Caldera gas condensació | 12.000 kWh gas | ~985 € |
+| Aerotèrmia COP 3.8 | 3.200 kWh elèctrics | ~352 € |
+
+**Estalvi anual: ~630 €**
+
+<div class="highlight">
+"Amb un diferencial de 9.000 € d'inversió i 630 € d'estalvi anual, el retorn és de 14 anys sense ajudes. Amb les subvencions del IDAE i l'ICAEN disponibles el 2025, baixa a 7–9 anys."
+</div>
+
+## Subvencions disponibles el 2025
+
+Les ajudes vigents a Catalunya per a la substitució de caldera de gas per aerotèrmia:
+
+- **IDAE – Next Generation**: fins al 40–65% del cost (habitatge habitual)
+- **ICAEN**: programes complementaris per a habitatges anteriors al 2007
+- **Bonificació IBI**: molts municipis del Vallès i Baix Llobregat bonifiquen el 50% durant 5 anys
+
+Amb les subvencions màximes, la inversió neta pot quedar en 4.000–6.000 €, amb un retorn de 6–9 anys.
+
+## Quan NO té sentit l'aerotèrmia
+
+- Habitatge molt mal aïllat i sense previsió de reforma de l'envolupant
+- Ús molt puntual (cases de cap de setmana sense connexió solar)
+- Edificis on el gas comunitari és molt barat per volum
+
+## Conclusió
+
+Per a la majoria d'habitatges catalans que estan reformant la calefacció el 2025, **l'aerotèrmia és la millor decisió econòmica a 10 anys vista**, especialment si es combina amb plaques solars fotovoltaiques que redueixen el cost de l'electricitat consumida.
+
+Si estàs valorant el canvi, el primer pas és calcular la càrrega tèrmica real del teu habitatge — no el que porta la caldera actual.
+        `,
+      },
+      {
+        id: "cost-plaques-solars-sabadell-2025",
+        tag: "Energia solar",
+        title: "Quant costa instal·lar plaques solars a Sabadell el 2025?",
+        excerpt: "Preus reals, subvencions vigents i retorn d'inversió per a habitatges unifamiliars i pisos a Sabadell i el Vallès Occidental.",
+        date: "Abril 2025",
+        readTime: "6 min",
+        img: "assets/solar.jpg",
+        featured: false,
+        content: `
+## Preus d'instal·lació solar a Sabadell el 2025
+
+El mercat fotovoltaic s'ha estabilitzat respecte al pic de preus de 2022–2023. Avui, per a un habitatge unifamiliar a Sabadell o el Vallès Occidental, els rangs reals són:
+
+| Potència instal·lada | Cost sense bateria | Amb bateria 10 kWh |
+|---|---|---|
+| 3 kWp (pis petit) | 4.500–6.500 € | 9.000–12.000 € |
+| 6 kWp (casa 150 m²) | 7.500–10.500 € | 13.000–17.000 € |
+| 10 kWp (casa gran) | 11.000–15.000 € | 18.000–24.000 € |
+
+## Subvencions a Sabadell el 2025
+
+L'Ajuntament de Sabadell manté la **bonificació del 95% de l'ICIO** per a instal·lacions fotovoltaiques, el que representa un estalvi directe de 150–600 € sobre la llicència.
+
+A banda:
+- **IDAE Next Generation**: 15–45% del cost d'instal·lació
+- **ICAEN**: ajudes específiques per a comunitats de veïns
+
+## Retorn de la inversió real
+
+Per a una instal·lació de 6 kWp a Sabadell (365 dies de sol, consum domèstic de 4.500 kWh/any):
+
+- Producció estimada: 7.200 kWh/any
+- Autoconsum directe: ~3.800 kWh/any
+- Estalvi anual: ~570 € (a 0,15 €/kWh de mitjana)
+- **ROI sense ajudes: 13–18 anys**
+- **ROI amb ajudes del 30%: 9–13 anys**
+
+Amb bateria de 10 kWh, l'autoconsum puja al 78–85% i el ROI millora un 25% addicional.
+
+<div class="highlight">
+"Una instal·lació ben dimensionada a Sabadell, amb les ajudes del 2025 i una tarifa amb discriminació horària, pot recuperar la inversió en 8–10 anys i generar estalvis nets durant els 20–25 anys de vida útil dels panells."
+</div>
+
+## Errors habituals que cal evitar
+
+1. **Sobredimensionar**: instal·lar 10 kWp quan el consum no justifica més de 6 kWp
+2. **No calcular l'ombra**: teulades amb obstacles que redueixen un 20–35% la producció
+3. **Comparar preus sense IVA ni legalització inclosa**
+4. **No demanar el certificat de l'instalador (RITE)**
+
+Tots els pressupostos de De baix a dalt inclouen l'estudi previ d'autoconsum, legalització i connexió a xarxa.
+        `,
+      },
+      {
+        id: "casa-passiva-guia-propietaris-catalunya",
+        tag: "Construcció eficient",
+        title: "Casa passiva a Catalunya: guia per a propietaris que volen construir el 2025",
+        excerpt: "Què és una casa passiva, quant costa realment respecte a una construcció convencional, i per quin motiu cada vegada més famílies catalanes opten per aquest estàndard.",
+        date: "Març 2025",
+        readTime: "9 min",
+        img: "https://images.unsplash.com/photo-1724582586529-62622e50c0b3?w=1200&q=85&auto=format&fit=crop",
+        featured: false,
+        content: `
+## Què és exactament una casa passiva?
+
+Una casa passiva (Passivhaus) és un estàndard de construcció que estableix uns requisits màxims de demanda energètica:
+
+- **Calefacció**: ≤ 15 kWh/m²·any
+- **Refrigeració**: ≤ 15 kWh/m²·any
+- **Energia primària total**: ≤ 120 kWh/m²·any
+- **Hermeticitat**: ≤ 0,6 renovacions d'aire per hora a 50 Pa
+
+Per context, una casa convencional a Catalunya consumeix 80–140 kWh/m²·any per calefacció. Una casa passiva consumeix entre 5 i 15 vegades menys.
+
+## Els cinc principis del disseny passiu
+
+### 1. Aïllament continu sense ponts tèrmics
+L'envolupant de l'edifici (murs, sostre, solera) ha d'estar completament aïllada sense interrupcions. Un pont tèrmic pot representar el 30% de les pèrdues totals de calor.
+
+### 2. Finestres de triple vidre orientades al sud
+A Catalunya, una casa ben orientada pot obtenir fins al 50% de la seva energia de calefacció de manera passiva a través de les finestres del sud.
+
+### 3. Hermeticitat a l'aire
+Una construcció convencional perd fins al 40% de la calor per infiltracions d'aire. La membrana d'estanquitat i els detalls de juntes dels marcs eliminen pràcticament aquesta pèrdua.
+
+### 4. Ventilació mecànica amb recuperació de calor (VMC)
+En comptes d'obrir finestres i perdre calor, un sistema VMC renova l'aire interior recuperant entre el 75 i el 92% de l'energia tèrmica.
+
+### 5. Absència de ponts tèrmics estructurals
+Cada element que travessa l'envolupant (cargols, ancoratges, lloses de balcó) és un pont tèrmic potencial. El disseny passiu els elimina o minimitza a la fase de projecte.
+
+## Quant costa construir una casa passiva a Catalunya?
+
+El sobrecost respecte a una construcció convencional de qualitat és de **8–15%**, no del 30–50% que molts propietaris creuen.
+
+Per a una casa unifamiliar de 200 m²:
+
+| Estàndard | Cost aproximat | Factura energètica anual |
+|---|---|---|
+| Construcció convencional | 280.000–340.000 € | 2.200–3.400 € |
+| Construcció eficient (CTE+) | 300.000–370.000 € | 800–1.400 € |
+| Casa passiva (Passivhaus) | 320.000–400.000 € | 150–400 € |
+
+<div class="highlight">
+"El sobrecost d'una casa passiva respecte a una construcció convencional es recupera en 12–18 anys gràcies a l'estalvi en factures. A partir d'aquí, la casa genera retorn net durant la resta de la seva vida útil de 80–100 anys."
+</div>
+
+## Per a quin tipus de propietari té sentit?
+
+- Qui construeix per a habitatge habitual (no per vendre en 5 anys)
+- Qui valora el confort tèrmic i l'absència de corrents i humitats
+- Qui vol independència energètica a llarg termini
+- Qui combinat amb solar i aerotèrmia vol arribar a energia zero o positiva
+
+## El procés constructiu amb De baix a dalt
+
+1. **Estudi de viabilitat passiva** (orientació, clima local, programa)
+2. **Disseny de l'envolupant** amb verificació PHPP
+3. **Selecció de materials** amb certificació de rendiment tèrmic
+4. **Execució amb control d'estanquitat** (blower door test intermedi)
+5. **Certificació final** i lliurament amb formació a l'usuari
+
+Si estàs valorant construir a Catalunya el 2025, el primer pas és una visita tècnica sense compromís per avaluar el solar i les possibilitats.
+        `,
+      },
+    ];
+
+    function ArticleView({ article, onBack }) {
+      const { open } = useModal();
+      const { lang } = useLang();
+      const ctaText = lang === "es" ? "Pide presupuesto" : lang === "en" ? "Get a quote" : "Demana pressupost";
+      const ctaSub = lang === "es"
+        ? "¿Tienes un proyecto en mente? Te devolvemos una propuesta técnica en menos de una semana."
+        : lang === "en"
+        ? "Have a project in mind? We'll send you a technical proposal in less than a week."
+        : "Tens un projecte en ment? Et tornem una proposta tècnica en menys d'una setmana.";
+
+      React.useEffect(() => {
+        window.scrollTo(0, 0);
+        document.title = article.title + " — De baix a dalt";
+      }, [article]);
+
+      return (
+        <div>
+          <Navbar />
+          <div className="article-header">
+            <div className="container">
+              <button onClick={onBack} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.45)", cursor: "pointer", fontSize: 13, marginBottom: 20, padding: 0 }}>
+                ← Blog
+              </button>
+              <div className="article-header__tag">{article.tag}</div>
+              <h1 className="article-header__title">{article.title}</h1>
+              <div className="article-header__meta">{article.date} · {article.readTime} de lectura</div>
+            </div>
+          </div>
+          <img src={article.img} alt={article.title}
+            style={{ width: "100%", maxHeight: 480, objectFit: "cover", display: "block" }} loading="eager" />
+          <div className="article-body"
+            dangerouslySetInnerHTML={{ __html: article.content
+              .replace(/## (.*)/g, '<h2>$1</h2>')
+              .replace(/### (.*)/g, '<h3>$1</h3>')
+              .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+              .replace(/<div class="highlight">([\s\S]*?)<\/div>/g, '<div class="highlight">$1</div>')
+              .replace(/\n\n/g, '</p><p>')
+              .replace(/^\s*<\/p>/, '')
+            }}
+          />
+          <div className="container" style={{ maxWidth: 720 }}>
+            <div className="article-cta">
+              <h3>{ctaText}</h3>
+              <p>{ctaSub}</p>
+              <Button variant="accent" size="lg" onClick={() => open(ctaText)}>{ctaText}</Button>
+            </div>
+          </div>
+          <footer className="footer" style={{ marginTop: 80 }}>
+            <div className="container">
+              <div className="footer__bottom" style={{ borderTop: "1px solid rgba(255,255,255,0.12)", paddingTop: 24 }}>
+                <span>© {new Date().getFullYear()} De baix a dalt SLU.</span>
+                <button onClick={onBack} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.5)", cursor: "pointer", fontSize: 13 }}>← Blog</button>
+              </div>
+            </div>
+          </footer>
+        </div>
+      );
+    }
+
+    function BlogPage() {
+      const { open } = useModal();
+      const { lang } = useLang();
+      const [activeArticle, setActiveArticle] = React.useState(null);
+
+      const labels = {
+        ca: { eyebrow: "Blog tècnic", title: "Articles i guies.", sub: "Construcció eficient, aerotèrmia, solar i domòtica. Escrits per tècnics, per a propietaris.", backHome: "← Tornar a l'inici", readMore: "Llegir article" },
+        es: { eyebrow: "Blog técnico", title: "Artículos y guías.", sub: "Construcción eficiente, aerotermia, solar y domótica. Escritos por técnicos, para propietarios.", backHome: "← Volver al inicio", readMore: "Leer artículo" },
+        en: { eyebrow: "Technical blog", title: "Articles & guides.", sub: "Efficient construction, heat pumps, solar and smart home. Written by engineers, for homeowners.", backHome: "← Back to home", readMore: "Read article" },
+      };
+      const l = labels[lang] || labels.ca;
+
+      if (activeArticle) {
+        return <ArticleView article={activeArticle} onBack={() => { setActiveArticle(null); document.title = "Blog — De baix a dalt"; }} />;
+      }
+
+      return (
+        <div>
+          <Navbar />
+          <div className="page-hero">
+            <div className="container">
+              <a href="index.html" style={{ display: "inline-block", marginBottom: 24, color: "rgba(255,255,255,0.45)", fontSize: 13 }}>{l.backHome}</a>
+              <Eyebrow light>{l.eyebrow}</Eyebrow>
+              <h1 className="page-hero__title">{l.title}</h1>
+              <p className="page-hero__sub">{l.sub}</p>
+            </div>
+          </div>
+
+          <div className="section">
+            <div className="container">
+              <div className="blog-grid">
+                {ARTICLES.map((article, i) => (
+                  <article key={article.id} className={"blog-card reveal" + (article.featured ? " blog-card--featured" : "")}
+                    onClick={() => setActiveArticle(article)}>
+                    <div className="blog-card__img-wrap">
+                      <img src={article.img} alt={article.title} className="blog-card__img" loading={i === 0 ? "eager" : "lazy"} />
+                    </div>
+                    <div className="blog-card__body">
+                      <div className="blog-card__tag">{article.tag}</div>
+                      <h2 className="blog-card__title">{article.title}</h2>
+                      <p className="blog-card__excerpt">{article.excerpt}</p>
+                      <div className="blog-card__footer">
+                        <span>{article.date} · {article.readTime}</span>
+                        <span className="blog-card__read">{l.readMore} <IconArrow /></span>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <footer className="footer">
+            <div className="container">
+              <div className="footer__bottom" style={{ borderTop: "1px solid rgba(255,255,255,0.12)", paddingTop: 24 }}>
+                <span>© {new Date().getFullYear()} De baix a dalt SLU.</span>
+                <a href="index.html" style={{ color: "rgba(255,255,255,0.5)", fontSize: 13 }}>{l.backHome}</a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(
+      <LangProvider>
+        <ModalProvider>
+          <BlogPage />
+        </ModalProvider>
+      </LangProvider>
+    );
+  </script>
+</body>
+</html>

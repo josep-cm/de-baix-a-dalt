@@ -865,6 +865,25 @@ a { color: inherit; text-decoration: none; }
 .footer__link { display: block; color: rgba(255,255,255,0.78); font-size: 14.5px; padding: 6px 0; transition: color .25s var(--ease); }
 .footer__link:hover { color: var(--white); }
 .footer__link--btn { background: none; border: none; cursor: pointer; text-align: left; width: 100%; font: inherit; letter-spacing: inherit; }
+.footer__zones {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 28px;
+  margin-bottom: 24px;
+}
+.footer__zones-label {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  margin-bottom: 10px;
+}
+.footer__zones-list {
+  font-size: 12px;
+  color: rgba(255,255,255,0.32);
+  line-height: 1.7;
+  max-width: 900px;
+}
 .footer__bottom {
   border-top: 1px solid rgba(255,255,255,0.12);
   padding-top: 24px;
