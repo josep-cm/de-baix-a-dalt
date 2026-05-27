@@ -202,6 +202,9 @@ function Navbar() {
           <a className="nav__link" href="#termiques">{nav.termiques || "Tèrmiques"}</a>
           <a className="nav__link" href="#domotica">{nav.domotica || "Domòtica"}</a>
           <a className="nav__link" href="#solar">{nav.solar || "Solar"}</a>
+          <span className="nav__divider" aria-hidden="true" />
+          <a className="nav__link" href="projectes.html">{nav.projectes || "Projectes"}</a>
+          <a className="nav__link" href="blog.html">{nav.blog || "Blog"}</a>
         </nav>
 
         <div className="nav__cta">
@@ -230,6 +233,8 @@ function Navbar() {
             ["#termiques", nav.termiques || "Tèrmiques"],
             ["#domotica", nav.domotica || "Domòtica"],
             ["#solar", nav.solar || "Solar"],
+            ["projectes.html", nav.projectes || "Projectes"],
+            ["blog.html", nav.blog || "Blog"],
           ].map(([href, label]) => (
             <a key={href} className="nav__drawer-link" href={href} onClick={closeMenu}>{label}</a>
           ))}

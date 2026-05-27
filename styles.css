@@ -254,7 +254,13 @@ a { color: inherit; text-decoration: none; }
 .nav__links {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 28px;
+}
+.nav__divider {
+  width: 1px; height: 16px;
+  background: currentColor;
+  opacity: 0.18;
+  flex-shrink: 0;
 }
 .nav__link {
   font-size: 14px;

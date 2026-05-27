@@ -12,6 +12,8 @@ const TRANSLATIONS = {
       termiques: "Tèrmiques",
       domotica: "Domòtica",
       solar: "Solar",
+      projectes: "Projectes",
+      blog: "Blog",
       cta: "Demana pressupost",
     },
     /* CTAs globals */
@@ -219,6 +221,8 @@ const TRANSLATIONS = {
       termiques: "Térmicas",
       domotica: "Domótica",
       solar: "Solar",
+      projectes: "Proyectos",
+      blog: "Blog",
       cta: "Pide presupuesto",
     },
     cta: {
@@ -413,6 +417,8 @@ const TRANSLATIONS = {
       termiques: "Thermal",
       domotica: "Smart Home",
       solar: "Solar",
+      projectes: "Projects",
+      blog: "Blog",
       cta: "Get a quote",
     },
     cta: {
