@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avís legal, Política de privacitat i Cookies — De baix a dalt</title>
+  <meta name="description" content="Avís legal, política de privacitat i política de cookies de De baix a dalt." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://debaixadalt.com/legal.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;450;500;600&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo-chevron.png" />
+
+  <style>
+    .legal-page { max-width: 780px; margin: 0 auto; padding: 120px 24px 80px; }
+    .legal-nav {
+      display: flex; gap: 6px; flex-wrap: wrap;
+      margin-bottom: 56px; padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .legal-nav__btn {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em;
+      text-transform: uppercase; padding: 8px 16px; border-radius: 4px;
+      border: 1px solid var(--line); background: none; cursor: pointer;
+      color: var(--ink-muted); transition: all .2s;
+    }
+    .legal-nav__btn:hover, .legal-nav__btn.is-active {
+      background: var(--ink); color: var(--white); border-color: var(--ink);
+    }
+    .legal-doc { display: none; }
+    .legal-doc.is-active { display: block; }
+    .legal-doc h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 500; letter-spacing: -0.03em; margin-bottom: 8px; }
+    .legal-doc .legal-updated { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 48px; display: block; }
+    .legal-doc h2 { font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em; margin: 40px 0 12px; color: var(--ink); }
+    .legal-doc h3 { font-size: 1rem; font-weight: 600; margin: 28px 0 8px; color: var(--ink); }
+    .legal-doc p { font-size: 15.5px; line-height: 1.7; color: var(--ink); margin-bottom: 16px; }
+    .legal-doc ul { padding-left: 20px; margin-bottom: 16px; }
+    .legal-doc li { font-size: 15.5px; line-height: 1.7; color: var(--ink); margin-bottom: 6px; }
+    .legal-doc a { color: var(--ink); border-bottom: 1px solid var(--hairline-strong); }
+    .legal-doc a:hover { border-bottom-color: var(--ink); }
+    .legal-doc table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .legal-doc th { background: var(--paper); font-weight: 600; text-align: left; padding: 10px 14px; border: 1px solid var(--line); }
+    .legal-doc td { padding: 10px 14px; border: 1px solid var(--line); vertical-align: top; line-height: 1.5; }
+    .legal-doc .highlight-box {
+      background: var(--paper); border-left: 3px solid var(--accent);
+      padding: 16px 20px; border-radius: 0 4px 4px 0;
+      margin: 24px 0; font-size: 14.5px; line-height: 1.6;
+    }
+    .legal-back { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); margin-bottom: 32px; }
+    .legal-back:hover { color: var(--ink); }
+    .lang-tabs { display: flex; gap: 4px; margin-bottom: 32px; }
+    .lang-tab { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--line); border-radius: 3px; cursor: pointer; background: none; color: var(--muted); transition: all .2s; }
+    .lang-tab.is-active { background: var(--ink); color: var(--white); border-color: var(--ink); }
+  </style>
+</head>
+<body>
+
+<div class="legal-page">
+
+  <a href="index.html" class="legal-back">← Tornar a l'inici</a>
+
+  <!-- Selector d'idioma -->
+  <div class="lang-tabs">
+    <button class="lang-tab is-active" onclick="setLang('ca')">CA</button>
+    <button class="lang-tab" onclick="setLang('es')">ES</button>
+    <button class="lang-tab" onclick="setLang('en')">EN</button>
+  </div>
+
+  <!-- Navegació entre documents -->
+  <nav class="legal-nav">
+    <button class="legal-nav__btn is-active" onclick="showDoc('avis-ca')">Avís legal</button>
+    <button class="legal-nav__btn" onclick="showDoc('privacitat-ca')">Política de privacitat</button>
+    <button class="legal-nav__btn" onclick="showDoc('cookies-ca')">Política de cookies</button>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════
+       CATALÀ
+  ══════════════════════════════════════════════ -->
+
+  <!-- AVÍS LEGAL CA -->
+  <div id="avis-ca" class="legal-doc is-active" lang="ca">
+    <h1>Avís legal</h1>
+    <span class="legal-updated">Darrera actualització: juny de 2025</span>
+
+    <h2>1. Dades identificatives del titular</h2>
+    <p>En compliment de l'article 10 de la Llei 34/2002, d'11 de juliol, de serveis de la societat de la informació i de comerç electrònic (LSSICE), s'informa que el titular d'aquest lloc web és:</p>
+    <ul>
+      <li><strong>Denominació social:</strong> De baix a dalt <em>[NIF/CIF: per completar]</em></li>
+      <li><strong>Domicili social:</strong> Sabadell, Espanya</li>
+      <li><strong>Correu electrònic:</strong> <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a></li>
+      <li><strong>Telèfon:</strong> <a href="tel:+34610248269">610 248 269</a></li>
+      <li><strong>Lloc web:</strong> <a href="https://debaixadalt.com">https://debaixadalt.com</a></li>
+    </ul>
+
+    <h2>2. Objecte i àmbit d'aplicació</h2>
+    <p>El present avís legal regula l'accés i l'ús del lloc web <strong>debaixadalt.com</strong> (d'ara endavant, "el lloc web"), del qual és titular De baix a dalt. L'accés al lloc web implica l'acceptació plena i sense reserves de totes les condicions incloses en aquest avís legal. L'empresa es reserva el dret de modificar en qualsevol moment les condicions aquí determinades.</p>
+
+    <h2>3. Condicions d'accés i ús</h2>
+    <p>L'usuari es compromet a fer un ús adequat dels continguts i serveis que el lloc web ofereix, i a no emprar-los per a activitats il·lícites o contràries a la bona fe i a l'ordenament jurídic vigent.</p>
+    <p>Queda expressament prohibit:</p>
+    <ul>
+      <li>Reproduir, distribuir o modificar els continguts del lloc web sense autorització prèvia i per escrit.</li>
+      <li>Introduir o difondre en la xarxa virus informàtics o qualsevol altre sistema que pugui causar danys als sistemes informàtics.</li>
+      <li>Intentar accedir, modificar o esborrar informació a la qual no es tingui autorització.</li>
+    </ul>
+
+    <h2>4. Propietat intel·lectual i industrial</h2>
+    <p>Tots els continguts del lloc web —inclosos, a títol enunciatiu i no limitatiu, textos, imatges, logotips, elements gràfics, estructura i disseny— són propietat de De baix a dalt o de tercers que n'han autoritzat l'ús, i estan protegits per la normativa espanyola i europea sobre propietat intel·lectual i industrial.</p>
+    <p>L'accés al lloc web no atorga a l'usuari cap dret sobre aquests continguts. Queda prohibida la reproducció total o parcial, comunicació pública, distribució, transformació o qualsevol altra forma d'explotació sense consentiment exprés i per escrit del titular.</p>
+
+    <h2>5. Exclusió de responsabilitat</h2>
+    <p>De baix a dalt no garanteix la disponibilitat i continuïtat ininterrompuda del lloc web. Tampoc garanteix la inexistència d'errors en el contingut, ni que el contingut estigui actualitzat permanentment. En la mesura permesa per la llei, De baix a dalt exclou qualsevol responsabilitat pels danys i perjudicis de qualsevol naturalesa derivats de l'accés o l'ús del lloc web.</p>
+    <p>El lloc web pot contenir enllaços a llocs web de tercers. De baix a dalt no controla ni és responsable dels continguts, polítiques de privacitat ni pràctiques dels llocs de tercers.</p>
+
+    <h2>6. Llei aplicable i jurisdicció</h2>
+    <p>Les relacions entre De baix a dalt i els usuaris del lloc web es regeixen per la legislació espanyola vigent. Per a la resolució de qualsevol conflicte que pugui sorgir, les parts se sotmeten als jutjats i tribunals de Sabadell, amb renúncia expressa a qualsevol altre fur que pogués correspondre'ls.</p>
+  </div>
+
+  <!-- POLÍTICA DE PRIVACITAT CA -->
+  <div id="privacitat-ca" class="legal-doc" lang="ca">
+    <h1>Política de privacitat</h1>
+    <span class="legal-updated">Darrera actualització: juny de 2025</span>
+
+    <div class="highlight-box">
+      <strong>Resum executiu:</strong> De baix a dalt recull únicament les dades que vosaltres ens faciliteu a través del formulari de contacte. Les usem exclusivament per respondre la vostra sol·licitud. No les venem ni les cedim a tercers amb fins comercials. Podeu exercir els vostres drets en qualsevol moment escrivint a <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a>.
+    </div>
+
+    <h2>1. Responsable del tractament</h2>
+    <ul>
+      <li><strong>Identitat:</strong> De baix a dalt <em>[NIF/CIF: per completar]</em></li>
+      <li><strong>Adreça postal:</strong> Sabadell, Espanya</li>
+      <li><strong>Correu electrònic:</strong> <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a></li>
+      <li><strong>Telèfon:</strong> <a href="tel:+34610248269">610 248 269</a></li>
+    </ul>
+
+    <h2>2. Dades que recollim i per quin motiu</h2>
+    <table>
+      <tr><th>Dada</th><th>Finalitat</th><th>Base legal</th></tr>
+      <tr><td>Nom i cognoms</td><td>Identificar-vos i personalitzar la resposta</td><td>Execució d'un precontracte (art. 6.1.b RGPD)</td></tr>
+      <tr><td>Telèfon</td><td>Contactar-vos per gestionar la sol·licitud</td><td>Execució d'un precontracte (art. 6.1.b RGPD)</td></tr>
+      <tr><td>Correu electrònic</td><td>Enviar-vos la resposta i la proposta</td><td>Execució d'un precontracte (art. 6.1.b RGPD)</td></tr>
+      <tr><td>Tipus de projecte i missatge</td><td>Avaluar la sol·licitud i elaborar pressupost</td><td>Execució d'un precontracte (art. 6.1.b RGPD)</td></tr>
+      <tr><td>Dades de navegació anonimitzades (GA4)</td><td>Analítica web agregada per millorar el lloc</td><td>Interès legítim / consentiment (art. 6.1.a i f RGPD)</td></tr>
+    </table>
+
+    <h2>3. Quant de temps conservem les vostres dades</h2>
+    <p>Les dades personals facilitades a través del formulari de contacte es conservaran durant el temps necessari per gestionar la vostra sol·licitud i, posteriorment, durant els terminis legalment exigits per a la prescripció d'accions civils i mercantils (5 anys des de la darrera interacció, conforme a l'art. 1964 del Codi civil).</p>
+    <p>Si la relació comercial es formalitza, les dades es conservaran durant la vigència de la relació contractual i fins a 10 anys posteriors, en compliment de les obligacions comptables i fiscals (Llei 58/2003 General Tributària).</p>
+
+    <h2>4. Qui té accés a les vostres dades</h2>
+    <p>Les vostres dades <strong>no es cediran a tercers</strong> amb fins comercials. Únicament podran accedir-hi:</p>
+    <ul>
+      <li><strong>El personal intern de De baix a dalt</strong> que necessiti tractar-les per gestionar la sol·licitud.</li>
+      <li><strong>Google LLC</strong>, com a encarregat del tractament, en relació amb l'eina d'analítica web Google Analytics 4, amb les garanties del Marc de Privacitat de Dades UE-EUA (DPF). Les dades d'analítica estan anonimitzades i agregades.</li>
+      <li><strong>Autoritats públiques o jutjats</strong>, quan sigui obligatori per llei.</li>
+    </ul>
+
+    <h2>5. Transferències internacionals de dades</h2>
+    <p>Google Analytics 4 pot processar dades en servidors ubicats als Estats Units. Google LLC es troba certificada sota el Marc de Privacitat de Dades UE-EUA (Data Privacy Framework), aprovat per la Comissió Europea el 10 de juliol de 2023, que garanteix un nivell de protecció adequat. Podeu consultar-ne els detalls a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+    <h2>6. Els vostres drets</h2>
+    <p>D'acord amb el RGPD i la LOPDGDD, podeu exercir en qualsevol moment els drets següents:</p>
+    <ul>
+      <li><strong>Accés:</strong> obtenir confirmació sobre si tractem les vostres dades i, en cas afirmatiu, accedir-hi.</li>
+      <li><strong>Rectificació:</strong> sol·licitar la correcció de dades inexactes o incompletes.</li>
+      <li><strong>Supressió ("dret a l'oblit"):</strong> sol·licitar l'eliminació de les vostres dades quan ja no siguin necessàries.</li>
+      <li><strong>Oposició:</strong> oposar-vos al tractament de les vostres dades per a determinades finalitats.</li>
+      <li><strong>Limitació del tractament:</strong> sol·licitar que es restringeixi el tractament en determinades circumstàncies.</li>
+      <li><strong>Portabilitat:</strong> rebre les vostres dades en un format estructurat i llegible per màquina.</li>
+      <li><strong>Retirada del consentiment:</strong> en qualsevol moment, sense afectar el tractament basat en el consentiment previ a la seva retirada.</li>
+    </ul>
+    <p>Per exercir qualsevol d'aquests drets, adreceu-vos per escrit a <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a>, indicant el vostre nom complet i una còpia del document d'identitat. Respondrem en el termini màxim d'un mes (prorrogable a tres en casos complexos).</p>
+    <p>Si considereu que el tractament de les vostres dades vulnera la normativa vigent, teniu dret a presentar una reclamació davant l'<strong>Agència Espanyola de Protecció de Dades</strong> (AEPD): <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>.</p>
+
+    <h2>7. Seguretat de les dades</h2>
+    <p>De baix a dalt aplica les mesures tècniques i organitzatives adequades per garantir un nivell de seguretat corresponent al risc, d'acord amb l'article 32 del RGPD: connexió xifrada HTTPS, accés restringit per contrasenya i còpies de seguretat periòdiques.</p>
+
+    <h2>8. Modificació de la política</h2>
+    <p>De baix a dalt es reserva el dret de modificar aquesta política de privacitat per adaptar-la a novetats legislatives, jurisprudencials o a canvis en les seves activitats. Les modificacions s'informaran en aquesta mateixa pàgina amb actualització de la data.</p>
+  </div>
+
+  <!-- POLÍTICA DE COOKIES CA -->
+  <div id="cookies-ca" class="legal-doc" lang="ca">
+    <h1>Política de cookies</h1>
+    <span class="legal-updated">Darrera actualització: juny de 2025</span>
+
+    <div class="highlight-box">
+      <strong>En resum:</strong> Usem cookies pròpies essencials (sessió i preferències d'idioma) i cookies de Google Analytics 4 per entendre com s'utilitza el lloc web. Podeu acceptar-les, rebutjar-les o gestionar-les en qualsevol moment.
+    </div>
+
+    <h2>1. Què és una cookie?</h2>
+    <p>Una cookie és un fitxer de text petit que un lloc web instal·la al vostre dispositiu (ordinador, tauleta o mòbil) quan el visiteu. Les cookies permeten al lloc web recordar les vostres accions i preferències durant un període de temps determinat.</p>
+
+    <h2>2. Tipus de cookies que utilitzem</h2>
+
+    <h3>2.1 Cookies estrictament necessàries (sempre actives)</h3>
+    <p>Sense aquestes cookies el lloc web no funciona correctament. No requereixen consentiment.</p>
+    <table>
+      <tr><th>Cookie</th><th>Proveïdor</th><th>Finalitat</th><th>Durada</th></tr>
+      <tr><td><code>dbd-auth</code></td><td>De baix a dalt</td><td>Gestió de l'accés autenticat (contrasenya de previsualització)</td><td>Sessió</td></tr>
+      <tr><td><code>dbd-lang</code></td><td>De baix a dalt</td><td>Desa la preferència d'idioma de l'usuari (CA/ES/EN)</td><td>1 any</td></tr>
+    </table>
+
+    <h3>2.2 Cookies analítiques (requereixen consentiment)</h3>
+    <p>S'utilitzen per entendre com interactuen els visitants amb el lloc web. Tota la informació recollida és agregada i anònima.</p>
+    <table>
+      <tr><th>Cookie</th><th>Proveïdor</th><th>Finalitat</th><th>Durada</th></tr>
+      <tr><td><code>_ga</code></td><td>Google Analytics 4</td><td>Identificador únic anònim per distingir usuaris</td><td>2 anys</td></tr>
+      <tr><td><code>_ga_XXXXXXXX</code></td><td>Google Analytics 4</td><td>Manté l'estat de la sessió d'analítica</td><td>2 anys</td></tr>
+      <tr><td><code>_gid</code></td><td>Google Analytics 4</td><td>Distingeix usuaris en sessions de 24 hores</td><td>24 hores</td></tr>
+    </table>
+    <p>Teniu més informació sobre com Google utilitza les dades a <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">policies.google.com/technologies/cookies</a>.</p>
+
+    <h2>3. Com gestionar o desactivar les cookies</h2>
+    <p>Podeu gestionar les cookies des del bàner de consentiment que apareix en accedir al lloc web per primera vegada. A més, podeu configurar el vostre navegador per bloquejar o eliminar cookies:</p>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+      <li><a href="https://support.mozilla.org/ca/kb/activa-i-desactiva-les-galetes-que-els-llocs-web-u" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+      <li><a href="https://support.apple.com/ca-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+      <li><a href="https://support.microsoft.com/ca-es/windows/eliminar-i-administrar-les-galetes-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener">Microsoft Edge</a></li>
+    </ul>
+    <p>Tingueu en compte que la desactivació de cookies pot afectar el funcionament d'algunes funcionalitats del lloc web.</p>
+    <p>Per opt-out específic de Google Analytics: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a>.</p>
+
+    <h2>4. Actualitzacions d'aquesta política</h2>
+    <p>De baix a dalt es reserva el dret de modificar aquesta política de cookies per adaptar-la a canvis normatius o a noves finalitats de tractament. Us informarem de qualsevol canvi rellevant actualitzant la data que apareix a la capçalera d'aquest document.</p>
+
+    <h2>5. Contacte</h2>
+    <p>Per a preguntes i/o comentaris sobre la nostra política de cookies, podeu posar-vos en contacte amb nosaltres:</p>
+    <ul>
+      <li><strong>De baix a dalt</strong> · Sabadell, Espanya</li>
+      <li>Web: <a href="https://debaixadalt.com">https://debaixadalt.com</a></li>
+      <li>Correu electrònic: <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a></li>
+      <li>Telèfon: <a href="tel:+34610248269">610 248 269</a></li>
+    </ul>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════
+       CASTELLANO
+  ══════════════════════════════════════════════ -->
+
+  <!-- AVISO LEGAL ES -->
+  <div id="avis-es" class="legal-doc" lang="es">
+    <h1>Aviso legal</h1>
+    <span class="legal-updated">Última actualización: junio de 2025</span>
+
+    <h2>1. Datos identificativos del titular</h2>
+    <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico (LSSICE), se informa que el titular de este sitio web es:</p>
+    <ul>
+      <li><strong>Denominación social:</strong> De baix a dalt <em>[NIF/CIF: pendiente de completar]</em></li>
+      <li><strong>Domicilio social:</strong> Sabadell, España</li>
+      <li><strong>Correo electrónico:</strong> <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a></li>
+      <li><strong>Teléfono:</strong> <a href="tel:+34610248269">610 248 269</a></li>
+      <li><strong>Sitio web:</strong> <a href="https://debaixadalt.com">https://debaixadalt.com</a></li>
+    </ul>
+
+    <h2>2. Objeto y ámbito de aplicación</h2>
+    <p>El presente aviso legal regula el acceso y el uso del sitio web <strong>debaixadalt.com</strong> (en adelante, "el sitio web"), del que es titular De baix a dalt. El acceso al sitio web implica la aceptación plena y sin reservas de todas las condiciones incluidas en este aviso legal. La empresa se reserva el derecho de modificar en cualquier momento las condiciones aquí determinadas.</p>
+
+    <h2>3. Condiciones de acceso y uso</h2>
+    <p>El usuario se compromete a hacer un uso adecuado de los contenidos y servicios que ofrece el sitio web, y a no emplearlos para actividades ilícitas o contrarias a la buena fe y al ordenamiento jurídico vigente.</p>
+    <p>Queda expresamente prohibido:</p>
+    <ul>
+      <li>Reproducir, distribuir o modificar los contenidos del sitio web sin autorización previa y por escrito.</li>
+      <li>Introducir o difundir en la red virus informáticos o cualquier otro sistema que pueda causar daños a los sistemas informáticos.</li>
+      <li>Intentar acceder, modificar o borrar información para la que no se tenga autorización.</li>
+    </ul>
+
+    <h2>4. Propiedad intelectual e industrial</h2>
+    <p>Todos los contenidos del sitio web —incluidos, a título enunciativo y no limitativo, textos, imágenes, logotipos, elementos gráficos, estructura y diseño— son propiedad de De baix a dalt o de terceros que han autorizado su uso, y están protegidos por la normativa española y europea sobre propiedad intelectual e industrial.</p>
+    <p>El acceso al sitio web no otorga al usuario ningún derecho sobre estos contenidos. Queda prohibida la reproducción total o parcial, comunicación pública, distribución, transformación o cualquier otra forma de explotación sin consentimiento expreso y por escrito del titular.</p>
+
+    <h2>5. Exclusión de responsabilidad</h2>
+    <p>De baix a dalt no garantiza la disponibilidad y continuidad ininterrumpida del sitio web, ni la inexistencia de errores en el contenido. En la medida permitida por la ley, De baix a dalt excluye cualquier responsabilidad por los daños y perjuicios de cualquier naturaleza derivados del acceso o el uso del sitio web.</p>
+    <p>El sitio web puede contener enlaces a sitios web de terceros. De baix a dalt no controla ni es responsable de los contenidos, políticas de privacidad ni prácticas de dichos sitios.</p>
+
+    <h2>6. Ley aplicable y jurisdicción</h2>
+    <p>Las relaciones entre De baix a dalt y los usuarios del sitio web se rigen por la legislación española vigente. Para la resolución de cualquier conflicto, las partes se someten a los juzgados y tribunales de Sabadell, con renuncia expresa a cualquier otro fuero que pudiera corresponderles.</p>
+  </div>
+
+  <!-- POLÍTICA DE PRIVACIDAD ES -->
+  <div id="privacitat-es" class="legal-doc" lang="es">
+    <h1>Política de privacidad</h1>
+    <span class="legal-updated">Última actualización: junio de 2025</span>
+
+    <div class="highlight-box">
+      <strong>Resumen ejecutivo:</strong> De baix a dalt recoge únicamente los datos que vosotros nos facilitáis a través del formulario de contacto. Los usamos exclusivamente para responder vuestra solicitud. No los vendemos ni cedemos a terceros con fines comerciales. Podéis ejercer vuestros derechos en cualquier momento escribiendo a <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a>.
+    </div>
+
+    <h2>1. Responsable del tratamiento</h2>
+    <ul>
+      <li><strong>Identidad:</strong> De baix a dalt <em>[NIF/CIF: pendiente]</em></li>
+      <li><strong>Dirección postal:</strong> Sabadell, España</li>
+      <li><strong>Correo electrónico:</strong> <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a></li>
+      <li><strong>Teléfono:</strong> <a href="tel:+34610248269">610 248 269</a></li>
+    </ul>
+
+    <h2>2. Datos que recogemos y por qué</h2>
+    <table>
+      <tr><th>Dato</th><th>Finalidad</th><th>Base legal</th></tr>
+      <tr><td>Nombre y apellidos</td><td>Identificaros y personalizar la respuesta</td><td>Ejecución de un precontrato (art. 6.1.b RGPD)</td></tr>
+      <tr><td>Teléfono</td><td>Contactaros para gestionar la solicitud</td><td>Ejecución de un precontrato (art. 6.1.b RGPD)</td></tr>
+      <tr><td>Correo electrónico</td><td>Enviaros la respuesta y la propuesta</td><td>Ejecución de un precontrato (art. 6.1.b RGPD)</td></tr>
+      <tr><td>Tipo de proyecto y mensaje</td><td>Evaluar la solicitud y elaborar presupuesto</td><td>Ejecución de un precontrato (art. 6.1.b RGPD)</td></tr>
+      <tr><td>Datos de navegación anonimizados (GA4)</td><td>Analítica web agregada para mejorar el sitio</td><td>Interés legítimo / consentimiento (art. 6.1.a y f RGPD)</td></tr>
+    </table>
+
+    <h2>3. Cuánto tiempo conservamos sus datos</h2>
+    <p>Los datos personales facilitados a través del formulario de contacto se conservarán durante el tiempo necesario para gestionar su solicitud y, posteriormente, durante los plazos legalmente exigidos para la prescripción de acciones civiles y mercantiles (5 años desde la última interacción, conforme al art. 1964 del Código Civil).</p>
+    <p>Si la relación comercial se formaliza, los datos se conservarán durante la vigencia de la relación contractual y hasta 10 años posteriores, en cumplimiento de las obligaciones contables y fiscales (Ley 58/2003 General Tributaria).</p>
+
+    <h2>4. Quién tiene acceso a sus datos</h2>
+    <p>Sus datos <strong>no se cederán a terceros</strong> con fines comerciales. Únicamente podrán acceder a ellos:</p>
+    <ul>
+      <li><strong>El personal interno de De baix a dalt</strong> que necesite tratarlos para gestionar la solicitud.</li>
+      <li><strong>Google LLC</strong>, como encargado del tratamiento, en relación con Google Analytics 4, con las garantías del Marco de Privacidad de Datos UE-EE.UU. (DPF). Los datos de analítica están anonimizados y agregados.</li>
+      <li><strong>Autoridades públicas o juzgados</strong>, cuando sea obligatorio por ley.</li>
+    </ul>
+
+    <h2>5. Transferencias internacionales de datos</h2>
+    <p>Google Analytics 4 puede procesar datos en servidores ubicados en Estados Unidos. Google LLC está certificada bajo el Marco de Privacidad de Datos UE-EE.UU. (Data Privacy Framework), aprobado por la Comisión Europea el 10 de julio de 2023. Más información en <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+    <h2>6. Sus derechos</h2>
+    <p>De acuerdo con el RGPD y la LOPDGDD, puede ejercer en cualquier momento los siguientes derechos:</p>
+    <ul>
+      <li><strong>Acceso</strong> a sus datos personales.</li>
+      <li><strong>Rectificación</strong> de datos inexactos o incompletos.</li>
+      <li><strong>Supresión</strong> ("derecho al olvido") cuando ya no sean necesarios.</li>
+      <li><strong>Oposición</strong> al tratamiento para determinadas finalidades.</li>
+      <li><strong>Limitación del tratamiento</strong> en determinadas circunstancias.</li>
+      <li><strong>Portabilidad</strong> de sus datos en formato estructurado.</li>
+      <li><strong>Retirada del consentimiento</strong> en cualquier momento.</li>
+    </ul>
+    <p>Para ejercer cualquiera de estos derechos, diríjase por escrito a <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a>, indicando su nombre completo y una copia del documento de identidad. Responderemos en el plazo máximo de un mes.</p>
+    <p>Si considera que el tratamiento de sus datos vulnera la normativa vigente, tiene derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos</strong> (AEPD): <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>.</p>
+
+    <h2>7. Seguridad de los datos</h2>
+    <p>De baix a dalt aplica medidas técnicas y organizativas adecuadas para garantizar un nivel de seguridad correspondiente al riesgo, conforme al artículo 32 del RGPD: conexión cifrada HTTPS, acceso restringido y copias de seguridad periódicas.</p>
+
+    <h2>8. Modificación de la política</h2>
+    <p>De baix a dalt se reserva el derecho de modificar esta política de privacidad para adaptarla a novedades legislativas o cambios en sus actividades. Las modificaciones se informarán en esta misma página con actualización de la fecha.</p>
+  </div>
+
+  <!-- POLÍTICA DE COOKIES ES -->
+  <div id="cookies-es" class="legal-doc" lang="es">
+    <h1>Política de cookies</h1>
+    <span class="legal-updated">Última actualización: junio de 2025</span>
+
+    <div class="highlight-box">
+      <strong>En resumen:</strong> Usamos cookies propias esenciales (sesión y preferencias de idioma) y cookies de Google Analytics 4 para entender cómo se utiliza el sitio web. Podéis aceptarlas, rechazarlas o gestionarlas en cualquier momento.
+    </div>
+
+    <h2>1. ¿Qué es una cookie?</h2>
+    <p>Una cookie es un pequeño archivo de texto que un sitio web instala en su dispositivo cuando lo visita. Las cookies permiten al sitio web recordar sus acciones y preferencias durante un período de tiempo determinado.</p>
+
+    <h2>2. Tipos de cookies que utilizamos</h2>
+
+    <h3>2.1 Cookies estrictamente necesarias (siempre activas)</h3>
+    <table>
+      <tr><th>Cookie</th><th>Proveedor</th><th>Finalidad</th><th>Duración</th></tr>
+      <tr><td><code>dbd-auth</code></td><td>De baix a dalt</td><td>Gestión del acceso autenticado (contraseña de previsualización)</td><td>Sesión</td></tr>
+      <tr><td><code>dbd-lang</code></td><td>De baix a dalt</td><td>Guarda la preferencia de idioma del usuario (CA/ES/EN)</td><td>1 año</td></tr>
+    </table>
+
+    <h3>2.2 Cookies analíticas (requieren consentimiento)</h3>
+    <table>
+      <tr><th>Cookie</th><th>Proveedor</th><th>Finalidad</th><th>Duración</th></tr>
+      <tr><td><code>_ga</code></td><td>Google Analytics 4</td><td>Identificador único anónimo para distinguir usuarios</td><td>2 años</td></tr>
+      <tr><td><code>_ga_XXXXXXXX</code></td><td>Google Analytics 4</td><td>Mantiene el estado de la sesión de analítica</td><td>2 años</td></tr>
+      <tr><td><code>_gid</code></td><td>Google Analytics 4</td><td>Distingue usuarios en sesiones de 24 horas</td><td>24 horas</td></tr>
+    </table>
+
+    <h2>3. Cómo gestionar o desactivar las cookies</h2>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+      <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+      <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+      <li><a href="https://support.microsoft.com/es-es/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener">Microsoft Edge</a></li>
+    </ul>
+    <p>Opt-out específico de Google Analytics: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a>.</p>
+
+    <h2>4. Contacto</h2>
+    <ul>
+      <li><strong>De baix a dalt</strong> · Sabadell, España</li>
+      <li>Web: <a href="https://debaixadalt.com">https://debaixadalt.com</a></li>
+      <li>Email: <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a></li>
+      <li>Teléfono: <a href="tel:+34610248269">610 248 269</a></li>
+    </ul>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════
+       ENGLISH
+  ══════════════════════════════════════════════ -->
+
+  <!-- LEGAL NOTICE EN -->
+  <div id="avis-en" class="legal-doc" lang="en">
+    <h1>Legal notice</h1>
+    <span class="legal-updated">Last updated: June 2025</span>
+
+    <h2>1. Company details</h2>
+    <ul>
+      <li><strong>Company name:</strong> De baix a dalt <em>[Tax ID: to be completed]</em></li>
+      <li><strong>Registered address:</strong> Sabadell, Spain</li>
+      <li><strong>Email:</strong> <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a></li>
+      <li><strong>Phone:</strong> <a href="tel:+34610248269">+34 610 248 269</a></li>
+      <li><strong>Website:</strong> <a href="https://debaixadalt.com">https://debaixadalt.com</a></li>
+    </ul>
+
+    <h2>2. Purpose and scope</h2>
+    <p>This legal notice governs access to and use of <strong>debaixadalt.com</strong> (hereinafter "the website"). Accessing the website implies full and unreserved acceptance of all conditions set out herein. De baix a dalt reserves the right to modify these conditions at any time.</p>
+
+    <h2>3. Conditions of access and use</h2>
+    <p>The user agrees to make appropriate use of the website's content and services, and not to use them for unlawful activities or activities contrary to good faith and applicable law. The following are expressly prohibited: reproducing, distributing or modifying website content without prior written authorisation; introducing computer viruses or any other system capable of causing damage; and attempting to access, modify or delete information without authorisation.</p>
+
+    <h2>4. Intellectual and industrial property</h2>
+    <p>All website content — including but not limited to texts, images, logos, graphic elements, structure and design — is owned by De baix a dalt or third parties who have authorised its use, and is protected under Spanish and European intellectual and industrial property law. Access to the website does not grant the user any rights over such content.</p>
+
+    <h2>5. Limitation of liability</h2>
+    <p>De baix a dalt does not guarantee uninterrupted availability of the website or the absence of errors in its content. To the extent permitted by law, De baix a dalt excludes any liability for damages of any nature arising from access to or use of the website. The website may contain links to third-party websites for which De baix a dalt accepts no responsibility.</p>
+
+    <h2>6. Applicable law and jurisdiction</h2>
+    <p>The relationship between De baix a dalt and website users is governed by Spanish law. Any disputes shall be submitted to the courts of Sabadell, Spain, with express waiver of any other jurisdiction.</p>
+  </div>
+
+  <!-- PRIVACY POLICY EN -->
+  <div id="privacitat-en" class="legal-doc" lang="en">
+    <h1>Privacy policy</h1>
+    <span class="legal-updated">Last updated: June 2025</span>
+
+    <div class="highlight-box">
+      <strong>Summary:</strong> De baix a dalt only collects data you provide via the contact form. We use it solely to respond to your request. We do not sell or share it with third parties for commercial purposes. You can exercise your rights at any time by writing to <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a>.
+    </div>
+
+    <h2>1. Data controller</h2>
+    <ul>
+      <li><strong>Identity:</strong> De baix a dalt <em>[Tax ID: to be completed]</em></li>
+      <li><strong>Address:</strong> Sabadell, Spain</li>
+      <li><strong>Email:</strong> <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a></li>
+      <li><strong>Phone:</strong> <a href="tel:+34610248269">+34 610 248 269</a></li>
+    </ul>
+
+    <h2>2. Data we collect and why</h2>
+    <table>
+      <tr><th>Data</th><th>Purpose</th><th>Legal basis</th></tr>
+      <tr><td>Full name</td><td>Identify you and personalise our response</td><td>Pre-contractual steps (Art. 6.1.b GDPR)</td></tr>
+      <tr><td>Phone number</td><td>Contact you to handle your request</td><td>Pre-contractual steps (Art. 6.1.b GDPR)</td></tr>
+      <tr><td>Email address</td><td>Send you our response and proposal</td><td>Pre-contractual steps (Art. 6.1.b GDPR)</td></tr>
+      <tr><td>Project type and message</td><td>Assess your request and prepare a quote</td><td>Pre-contractual steps (Art. 6.1.b GDPR)</td></tr>
+      <tr><td>Anonymised browsing data (GA4)</td><td>Aggregated web analytics to improve the site</td><td>Legitimate interest / consent (Art. 6.1.a &amp; f GDPR)</td></tr>
+    </table>
+
+    <h2>3. Retention periods</h2>
+    <p>Personal data provided via the contact form will be retained for the time necessary to handle your request and, thereafter, for the legally required limitation periods for civil and commercial actions (5 years from the last interaction, pursuant to Art. 1964 of the Spanish Civil Code). If a contract is concluded, data will be retained for the duration of the contractual relationship and up to 10 years thereafter, in compliance with accounting and tax obligations.</p>
+
+    <h2>4. Who has access to your data</h2>
+    <p>Your data will <strong>not be shared with third parties</strong> for commercial purposes. Access is limited to:</p>
+    <ul>
+      <li><strong>De baix a dalt internal staff</strong> who need it to handle your request.</li>
+      <li><strong>Google LLC</strong>, as data processor, for Google Analytics 4, under the EU-US Data Privacy Framework (DPF) adequacy decision of 10 July 2023. Analytics data is anonymised and aggregated.</li>
+      <li><strong>Public authorities or courts</strong>, when required by law.</li>
+    </ul>
+
+    <h2>5. International transfers</h2>
+    <p>Google Analytics 4 may process data on servers in the United States. Google LLC is certified under the EU-US Data Privacy Framework, approved by the European Commission on 10 July 2023, ensuring an adequate level of protection. More information at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+    <h2>6. Your rights</h2>
+    <p>Under the GDPR, you may exercise the following rights at any time: <strong>access, rectification, erasure, objection, restriction of processing, data portability</strong> and <strong>withdrawal of consent</strong>. To do so, write to <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a> with your full name and a copy of your ID document. We will respond within one month. You also have the right to lodge a complaint with the Spanish Data Protection Authority (AEPD) at <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>.</p>
+
+    <h2>7. Security</h2>
+    <p>De baix a dalt applies appropriate technical and organisational measures to ensure a level of security appropriate to the risk, in accordance with Art. 32 GDPR: HTTPS encryption, restricted access and regular backups.</p>
+  </div>
+
+  <!-- COOKIE POLICY EN -->
+  <div id="cookies-en" class="legal-doc" lang="en">
+    <h1>Cookie policy</h1>
+    <span class="legal-updated">Last updated: June 2025</span>
+
+    <div class="highlight-box">
+      <strong>In brief:</strong> We use essential first-party cookies (session and language preferences) and Google Analytics 4 cookies to understand how the website is used. You can accept, reject or manage them at any time.
+    </div>
+
+    <h2>1. What is a cookie?</h2>
+    <p>A cookie is a small text file that a website places on your device when you visit it. Cookies allow the website to remember your actions and preferences over a period of time.</p>
+
+    <h2>2. Cookies we use</h2>
+
+    <h3>2.1 Strictly necessary cookies (always active)</h3>
+    <table>
+      <tr><th>Cookie</th><th>Provider</th><th>Purpose</th><th>Duration</th></tr>
+      <tr><td><code>dbd-auth</code></td><td>De baix a dalt</td><td>Manages authenticated access (preview password)</td><td>Session</td></tr>
+      <tr><td><code>dbd-lang</code></td><td>De baix a dalt</td><td>Saves the user's language preference (CA/ES/EN)</td><td>1 year</td></tr>
+    </table>
+
+    <h3>2.2 Analytics cookies (require consent)</h3>
+    <table>
+      <tr><th>Cookie</th><th>Provider</th><th>Purpose</th><th>Duration</th></tr>
+      <tr><td><code>_ga</code></td><td>Google Analytics 4</td><td>Anonymous unique identifier to distinguish users</td><td>2 years</td></tr>
+      <tr><td><code>_ga_XXXXXXXX</code></td><td>Google Analytics 4</td><td>Maintains analytics session state</td><td>2 years</td></tr>
+      <tr><td><code>_gid</code></td><td>Google Analytics 4</td><td>Distinguishes users within 24-hour sessions</td><td>24 hours</td></tr>
+    </table>
+
+    <h2>3. Managing cookies</h2>
+    <p>You can manage cookies via your browser settings:</p>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+      <li><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+      <li><a href="https://support.apple.com/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+      <li><a href="https://support.microsoft.com/en-us/windows/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener">Microsoft Edge</a></li>
+    </ul>
+    <p>Google Analytics opt-out: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a>.</p>
+
+    <h2>4. Contact</h2>
+    <ul>
+      <li><strong>De baix a dalt</strong> · Sabadell, Spain</li>
+      <li>Website: <a href="https://debaixadalt.com">https://debaixadalt.com</a></li>
+      <li>Email: <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a></li>
+      <li>Phone: <a href="tel:+34610248269">+34 610 248 269</a></li>
+    </ul>
+  </div>
+
+</div><!-- .legal-page -->
+
+<script>
+  var currentLang = 'ca';
+  var currentDoc = 'avis';
+
+  var docMap = {
+    'avis': 0, 'privacitat': 1, 'cookies': 2
+  };
+  var docLabels = {
+    ca: ['Avís legal', 'Política de privacitat', 'Política de cookies'],
+    es: ['Aviso legal', 'Política de privacidad', 'Política de cookies'],
+    en: ['Legal notice', 'Privacy policy', 'Cookie policy'],
+  };
+  var docKeys = ['avis', 'privacitat', 'cookies'];
+
+  function showDoc(id) {
+    // id format: "avis-ca" or just "avis" (uses currentLang)
+    var parts = id.split('-');
+    var doc = parts[0];
+    var lang = parts[1] || currentLang;
+    currentDoc = doc;
+    currentLang = lang;
+
+    document.querySelectorAll('.legal-doc').forEach(function(el) { el.classList.remove('is-active'); });
+    var target = document.getElementById(doc + '-' + lang);
+    if (target) target.classList.add('is-active');
+
+    document.querySelectorAll('.legal-nav__btn').forEach(function(btn, i) {
+      btn.classList.toggle('is-active', i === docMap[doc]);
+    });
+  }
+
+  function setLang(lang) {
+    currentLang = lang;
+
+    // Update lang tab styles
+    document.querySelectorAll('.lang-tab').forEach(function(btn) {
+      btn.classList.toggle('is-active', btn.textContent === lang.toUpperCase());
+    });
+
+    // Update nav button labels
+    var btns = document.querySelectorAll('.legal-nav__btn');
+    docKeys.forEach(function(key, i) {
+      btns[i].textContent = docLabels[lang][i];
+      btns[i].setAttribute('onclick', "showDoc('" + key + "-" + lang + "')");
+    });
+
+    // Update back link text
+    var backTexts = { ca: '← Tornar a l\'inici', es: '← Volver al inicio', en: '← Back to home' };
+    var backLink = document.querySelector('.legal-back');
+    if (backLink) backLink.textContent = backTexts[lang];
+
+    showDoc(currentDoc + '-' + lang);
+  }
+</script>
+
+</body>
+</html>

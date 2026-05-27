@@ -523,7 +523,13 @@ function Footer() {
         </div>
         <div className="footer__bottom">
           <span>© {new Date().getFullYear()} De baix a dalt SLU. {f.legal || "Tots els drets reservats."}</span>
-          <span>{f.legalLinks || "Avís legal · Privacitat · Cookies"}</span>
+          <span>
+            <a href="legal.html" style={{ color: "inherit" }} onClick={(e) => { e.preventDefault(); window.location.href = 'legal.html#avis'; }}>{(f.legalLinkAvis || "Avís legal")}</a>
+            {" · "}
+            <a href="legal.html" style={{ color: "inherit" }} onClick={(e) => { e.preventDefault(); window.location.href = 'legal.html#privacitat'; }}>{(f.legalLinkPriv || "Privacitat")}</a>
+            {" · "}
+            <a href="legal.html" style={{ color: "inherit" }} onClick={(e) => { e.preventDefault(); window.location.href = 'legal.html#cookies'; }}>{(f.legalLinkCook || "Cookies")}</a>
+          </span>
         </div>
       </div>
     </footer>
