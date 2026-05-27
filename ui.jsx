@@ -458,8 +458,7 @@ function ContactModal({ open, initialLabel, onClose }) {
 
             <div className="modal__submit-row">
               <p className="modal__legal">
-                {m.legal || "Acceptant, ens autoritzes a contactar-te per gestionar la teva sol·licitud."}{" "}
-                <a href="#privacitat">{m.legalLink || "Política de privacitat"}</a>.
+                {m.legal || "La comunicació enviada quedarà incorporada a un fitxer del qual és responsable De baix a dalt. Aquesta comunicació s'utilitzarà exclusivament per tractar les vostres dades per atendre la vostra sol·licitud, sempre d'acord amb el Reglament (UE) 2016/679 (RGPD), la Llei orgànica 15/1999 (LOPD) i el Reial decret 1720/2007 de desenvolupament de la LOPD, sobre protecció de dades. Les vostres dades no es comunicaran a tercers, excepte per obligació legal, i es mantindran mentre no en sol·liciteu la cancel·lació. En qualsevol moment podeu exercir els drets d'accés, rectificació, portabilitat i oposició, o si escau, a la limitació o cancel·lació del tractament, comunicant-ho per escrit, indicant les vostres dades personals per correu electrònic a "}{m.legalEmail && <a href={`mailto:${m.legalEmail}`}>{m.legalEmail}</a>}{!m.legalEmail && <a href="mailto:info@debaixadalt.com">info@debaixadalt.com</a>}.
               </p>
               <Button as="button" variant="primary" size="lg" type="submit" disabled={isLoading} className={isLoading ? "btn--loading" : ""}>
                 {isLoading ? (m.submitting || "Enviant…") : (m.submit || "Enviar sol·licitud")}
